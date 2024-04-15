@@ -1,0 +1,19 @@
+.number-odd {
+  background-color: lightpink;
+  font-style: sans-serif;
+  font-weight: bold;
+}
+
+#number-2 {
+  color: blue;
+  font-size: 36px;
+}
+
+.number-3 {
+  font-size: 24px;
+}
+#number-4 {
+  background-color: lightgreen;
+  font-size: 24px;
+  font-weight: bold;
+}
