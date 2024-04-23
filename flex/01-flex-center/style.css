@@ -3,6 +3,9 @@
   border: 4px solid midnightblue;
   width: 400px;
   height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box {
@@ -13,3 +16,11 @@
   width: 80px;
   height: 80px;
 }
+
+/* SELF NOTES */
+/*
+1. Used display: flex to make the outer blue box the flex container.
+2. Used align-items: center to vertically align the flex item which is just the red box.
+3. Used justify-content: center to horizontally aligh the flex item, i.e. the red box. 
+NOTE: The above two flex properties are applied on flex container, which allows us to control the behavior of how the space should be distributed between the flex items vertically/horizontally.
+ */
