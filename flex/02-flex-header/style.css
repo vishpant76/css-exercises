@@ -1,6 +1,19 @@
-.header  {
+.header {
   font-family: monospace;
   background: papayawhip;
+  /* UPDATE */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 10px; */
+  padding: 8px;
+}
+
+.left-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .logo {
@@ -11,9 +24,20 @@
   padding: 4px 32px;
 }
 
+.right-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+
+  /* UPDATE */
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -23,3 +47,10 @@ a {
   /* this removes the line under the links */
   text-decoration: none;
 }
+
+/* SELF NOTES */
+/*
+    + There was no need of using separate `.left-links ul` and `.right-links ul`. Since all `ul`'s are essentially having the same properties, we can just create one common `ul` that will be made into flex container with the relevant flex container properties applied to it.
+    + `ul` elements have some default margin/padding, so need to reset them to 0.
+    + Realizing that there was a need to have nested flexboxes in this exercise. The outer flexbox container was the .header, containing the two `ul`s and the logo `div` in the middle. While each of the two `ul`s were themselves flex containers for their `li` items. 
+ */
