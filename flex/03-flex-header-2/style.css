@@ -15,7 +15,6 @@ body {
   /* UPDATE */
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   padding: 8px;
 }
 
@@ -48,27 +47,31 @@ a {
   color: rebeccapurple;
 }
 
-/* UPDATE */
-.left-side {
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  gap: 16px;
-}
-
 ul {
   list-style-type: none;
   /* UPDATE */
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: space-between; */
-  margin: 0;
   padding: 0;
+  margin: 0;
+  display: flex;
   gap: 16px;
+  /* align-items: center; */
 }
 
+/* UPDATE */
+.left-side,
 .right-side {
   display: flex;
-  align-items: center;
   gap: 16px;
+  align-items: center;
 }
+
+/* Lessons Learnt */
+/*
+    + The main flexbox was the .header element.
+    + The .logo div, and the ul container 'links' containing 3 li links are moving together, so they will be wrapped in a separate div which would become a nested flexbox. This div was named .left-side.
+    + Similarly, the .button and the .profile-image div are behaving as one entity so they are wrapped inside a separate div (.right-side) which will become another nested flex container.
+    + So the .header flex container now consists of two flex items: .left-side and .right-side. Both of them are spread far apart, so we use justify-content: space-between on the .header CSS.
+    + The ul element, which is one of the flex items of .left-side, will also become a nested flex-container for the li items (links). padding and margin 0 will be used on ul CSS. And a gap to keep some distance between lis.
+    + The .left-side and .right-side flex containers have similar behavior so their CSS is combined. A gap is used to put some distance between their flex items. And also, align-items: center used to center them.
+    + NOTE: `align-items: center;` was NOT used in `ul` CSS because if we did that, although the three links will become vertically aligned, the flex-items of .right-side would not. So using that property on the common selector of .left-side, .right-side ensures that the flex-items of both the containers will get vertically aligned. 
+ */
